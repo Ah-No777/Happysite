@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red and Violet Background</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom, red, violet);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .styled-button {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: white;
+            background-color: #ff5733;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .styled-button:hover {
+            background-color: #c70039;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="styled-button" onclick="showPhotoAndPlaySound()">Click Me</button>
+    <img id="myPhoto" src="D:\Users\UTILISATEUR\Pictures\Screenshots\the_screamer_by_kman_studio_d48ycad-pre.jpg" alt="My Photo" class="hidden">
+    <audio id="mySound">
+        <source src="D:\Users\UTILISATEUR\Pictures\Screenshots\jump-scare-52517.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function showPhotoAndPlaySound() {
+            document.getElementById('myPhoto').classList.remove('hidden');
+            document.getElementById('mySound').play();
+        }
+    </script>
+</body>
+</html>
